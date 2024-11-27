@@ -1,13 +1,13 @@
 <template>
   <div class="grid">
-    <template v-for="(n, i) of gameArray.length" :key="i">
-      <template v-for="(m, j) of gameArray.length" :key="i + ',' + j">
+    <template v-for="(_n, i) of gameArray.length" :key="i">
+      <template v-for="(_m, j) of gameArray.length" :key="i + ',' + j">
         <input
           type="text"
           class="cell"
           data-cy="cell"
           readonly
-          @click="() => onClick(i, j)"
+          @click="onClick(i, j)"
           :value="gameArray[i][j]"
         />
       </template>
